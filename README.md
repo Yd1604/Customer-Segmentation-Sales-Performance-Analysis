@@ -113,13 +113,9 @@ Created an interactive dashboard including:
 
 ## 📈 Dashboard Preview
 
-> Add your dashboard screenshot here.
 
-```markdown
-![Dashboard Preview](images/customer-segmentation-dashboard.png)
-```
+<img width="3200" height="1800" alt="Dashboard" src="https://github.com/user-attachments/assets/57b23321-f672-4ebf-8854-ecb4c6204f87" />
 
-### Tableau Public Dashboard
 
 
 
