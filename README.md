@@ -34,7 +34,7 @@ I focused on:
 ## 🛠️ Tools I Used
 
 **Python & Pandas** — Data cleaning and preparation  
-**Google Colab** — Python development environment  
+**Google Colab** — Python development 
 **Google BigQuery & SQL** — Data exploration, RFM analysis and segmentation  
 **Tableau** — Dashboard development and visualisation  
 **GitHub** — Project documentation and version control
