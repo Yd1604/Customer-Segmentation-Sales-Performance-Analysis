@@ -1,5 +1,4 @@
-
--- CUSTOMER SEGMENTATION & RFM ANALYSIS
+CUSTOMER SEGMENTATION & RFM ANALYSIS
 
 -- 1. DATA EXPLORATION
 
@@ -12,14 +11,12 @@ FROM `segmentation-project-503000.customer_segmentation.cleaned_online_retail`
 LIMIT 10;
 
 
-
 --  CHECK TOTAL NUMBER OF ROWS
 
 
 SELECT
     COUNT(*) AS Total_Rows
 FROM `segmentation-project-503000.customer_segmentation.cleaned_online_retail`;
-
 
 
 --  CHECK UNIQUE CUSTOMERS
@@ -30,13 +27,11 @@ SELECT
 FROM `segmentation-project-503000.customer_segmentation.cleaned_online_retail`;
 
 
-
 --  CHECK UNIQUE ORDER
 
 SELECT
     COUNT(DISTINCT InvoiceNo) AS Total_Orders
 FROM `segmentation-project-503000.customer_segmentation.cleaned_online_retail`;
-
 
 
 -- CHECK TRANSACTION DATE RANGE
@@ -46,7 +41,6 @@ SELECT
     MIN(DATE(InvoiceDate)) AS First_Transaction_Date,
     MAX(DATE(InvoiceDate)) AS Last_Transaction_Date
 FROM `segmentation-project-503000.customer_segmentation.cleaned_online_retail`;
-
 
 
 -- CHECK COUNTRIES IN THE DATASET
@@ -60,14 +54,12 @@ GROUP BY Country
 ORDER BY Transaction_Count DESC;
 
 
-
 -- CHECK TOTAL REVENUE
 
 
 SELECT
     ROUND(SUM(TotalPrice), 2) AS Total_Revenue
 FROM `segmentation-project-503000.customer_segmentation.cleaned_online_retail`;
-
 
 
 --  TOP 10 COUNTRIES BY REVENUE
@@ -82,7 +74,6 @@ ORDER BY Revenue DESC
 LIMIT 10;
 
 
-
 --  TOP 10 PRODUCTS BY REVENUE
 
 
@@ -94,7 +85,6 @@ WHERE Description IS NOT NULL
 GROUP BY Description
 ORDER BY Product_Revenue DESC
 LIMIT 10;
-
 
 
 --  MONTHLY REVENUE TREND
