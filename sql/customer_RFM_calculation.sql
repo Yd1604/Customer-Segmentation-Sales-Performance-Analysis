@@ -2,16 +2,15 @@
 
 
 -- RFM stands for:
--- R = Recency  : Number of days since the customer's last purchase
+-- R = Recency: Number of days since the customer's last purchase
 -- F = Frequency: Number of unique orders placed by the customer
--- M = Monetary : Total amount spent by the customer
-
+-- M = Monetary: Total amount spent by the customer
 
 
 --  CHECK TRANSACTION DATE RANGE
 
 
--- Check the first and last purchase dates in the dataset.
+-- first and last purchase dates in the dataset
 
 SELECT
     MIN(DATE(InvoiceDate)) AS First_Purchase_Date,
@@ -20,20 +19,7 @@ FROM
     `segmentation-project-503000.customer_segmentation.cleaned_online_retail`;
 
 
---  CALCULATE RFM VALUES
-
-
-
--- Recency:
--- Calculates the number of days between the customer's
--- most recent purchase and the analysis date.
---
--- Frequency:
--- Counts the number of unique invoices/orders placed
--- by each customer.
---
--- Monetary:
--- Calculates the total amount spent by each customer.
+-- calculating RFM Values
 
 SELECT
     CustomerID,
@@ -61,11 +47,10 @@ ORDER BY
     Monetary DESC;
 
 
-
 --  VALIDATE RFM RESULTS
 
 
--- Check the number of customers included in the RFM analysis.
+-- the number of customers included in the RFM analysis.
 
 WITH rfm_values AS (
 
@@ -103,7 +88,7 @@ FROM
 
 
 
---  VIEW TOP CUSTOMERS BY MONETARY VALUE
+-- TOP CUSTOMERS BY MONETARY VALUE
 
 
 WITH rfm_values AS (
