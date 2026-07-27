@@ -1,4 +1,4 @@
-- 3. RFM SCORING
+-- 3. RFM SCORING
 
 -- Recency:
 -- Lower number of days is better.
@@ -74,7 +74,6 @@ rfm_scores AS (
     FROM
         rfm_values
 )
-
 
 
 -- CREATE COMBINED RFM SCORE
